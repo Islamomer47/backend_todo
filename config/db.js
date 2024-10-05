@@ -5,6 +5,9 @@ const connectionString = process.env.POST_URL;
 
 const pool = new Pool({
   connectionString: connectionString,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 pool
